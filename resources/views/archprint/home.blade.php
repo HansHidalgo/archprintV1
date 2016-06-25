@@ -35,7 +35,7 @@
                                 <div class="col-md-3">
                                     
                                     
-                                    <a href="{{url('/update')}}" class="btn btn-default side">Imprime ahora!</a>
+                                    <a data-toggle="modal" data-target="#login-modal" class="btn btn-default side">Ordene ahora!</a>
                                 </div>
                                 <div class="col-md-6">
                                     <div id="carousel-slider" class="carousel slide" data-ride="carousel">
@@ -75,4 +75,13 @@
                 </div>
             </div>  
         </section>
+@endsection
+@section('nav')
+<ul class="nav navbar-nav navbar-right">
+    <li class="active"><a href="{{url('/')}}">Inicio</a></li>
+    <li><a href="{{ url('/beneficios') }}">Beneficios</a></li>
+    <li><a data-toggle="modal" data-target="#login-modal">Ordene</a></li>
+    <li><a href="{{ url('/somos') }}">¿Quiénes somos?</a></li>
+    <li><a href="#contact">Contáctanos</a></li>
+</ul>
 @endsection

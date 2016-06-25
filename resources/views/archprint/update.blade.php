@@ -17,7 +17,7 @@
 
                  <div class="container">
         <div class="row" style="margin-top: 70px;">
-            <h1>SUBIR MODELO</h1>
+            <h1>SUBA SU MODELO</h1>
             <div class="panel panel-primary" style="margin-top: 35px;">
                 <div class="panel-heading">
                     SUBA SU ARCHIVO (.STL)
@@ -79,4 +79,13 @@
             }
         };
     </script>
+@endsection
+@section('nav')
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="{{url('/')}}">Inicio</a></li>
+    <li><a href="{{ url('/beneficios') }}">Beneficios</a></li>
+    <li class="active"><a data-toggle="modal" data-target="#login-modal">Ordene</a></li>
+    <li><a href="{{ url('/somos') }}">¿Quiénes somos?</a></li>
+    <li><a href="#contact">Contáctanos</a></li>
+</ul>
 @endsection

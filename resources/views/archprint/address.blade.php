@@ -16,7 +16,7 @@
 
                     <div class="box">
                         <form>
-                            <h1 style="color: #041d33">Dirección</h1>
+                            <h1 style="color: #041d33">Ingrese su dirección</h1>
                             <ul class="nav nav-pills nav-justified borde">
                                 <li class="active"><a href="#"><i class="fa fa-map-marker"></i><br>Dirección</a>
                                 </li>
@@ -29,58 +29,31 @@
                             </ul>
 
                             <div class="content">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="firstname">Nombres</label>
-                                            <input type="text" class="form-control" id="firstname">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="lastname">Apellidos</label>
-                                            <input type="text" class="form-control" id="lastname">
-                                        </div>
-                                    </div>
+                                <div class="row col-md-12">
+                                    <h2 style="color: #de5749;">Utilizar <a href="{{url('/delivery')}}">dirección de usuario</a> o ingresar nueva dirección</h2>
                                 </div>
                                 <!-- /.row -->
 
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <label for="company">DNI</label>
-                                            <input type="text" class="form-control" id="company">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="street">Dirección</label>
-                                            <input type="text" class="form-control" id="street">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-
-                                <div class="row">
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="form-group">
-                                            <label for="city">Empresa</label>
+                                            <label for="city">Dirección</label>
                                             <input type="text" class="form-control" id="city">
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-md-3">
+                                    <div class="col-sm-6 col-md-6">
                                         <div class="form-group">
                                             <label for="zip">Referencia</label>
                                             <input type="text" class="form-control" id="zip">
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-md-3">
+                                    <div class="col-sm-6 col-md-6">
                                         <div class="form-group">
                                             <label for="state">Región</label>
                                             <select class="form-control" id="state"></select>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-md-3">
+                                    <div class="col-sm-6 col-md-6">
                                         <div class="form-group">
                                             <label for="country">Ciudad</label>
                                             <select class="form-control" id="country"></select>
@@ -109,7 +82,7 @@
                                     <a href="{{ url('/update') }}" class="btn btn-default"><i class="fa fa-chevron-left"></i>Regresar</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="{{ url('/delivery') }}" class="btn btn-primary">Continuar con Delivery<i class="fa fa-chevron-right"></i></a>
+                                    <a href="{{ url('/delivery') }}" class="btn btn-primary">Delivery<i class="fa fa-chevron-right"></i></a>
                                     </button>
                                 </div>
                             </div>
@@ -161,4 +134,13 @@
             <!-- /.container -->
         </div>
 </section>
+@endsection
+@section('nav')
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="{{url('/')}}">Inicio</a></li>
+    <li><a href="{{ url('/beneficios') }}">Beneficios</a></li>
+    <li class="active"><a data-toggle="modal" data-target="#login-modal">Ordene</a></li>
+    <li><a href="{{ url('/somos') }}">¿Quiénes somos?</a></li>
+    <li><a href="#contact">Contáctanos</a></li>
+</ul>
 @endsection

@@ -61,4 +61,8 @@ class ArchprintController extends Controller
     {
         return view('archprint.history');
     }
+    public function registro()
+    {
+        return view('archprint.registro');
+    }
 }

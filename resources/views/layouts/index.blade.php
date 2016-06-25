@@ -45,6 +45,36 @@
             </div>
         </div>
     </div-->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" style="margin-top: 40px;">
+            <div class="modal-dialog modal-sm">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="Login" style="color: #de5749;">Ingrese su usuario</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="post">
+                            <div class="form-group" style="border: 1px solid #25a7b4;">
+                                <input type="text" class="form-control" id="email_modal" placeholder="email">
+                            </div>
+                            <div class="form-group" style="border: 1px solid #25a7b4;">
+                                <input type="password" class="form-control" id="password_modal" placeholder="password">
+                            </div>
+
+                            <p class="text-center">
+                                <a class="btn btn-template-main" style="background-color: #428bca; color: white;"  href="{{url('/update')}}"><i class="fa fa-sign-in"></i> Ingrese</a>
+                            </p>
+
+                        </form>
+
+                        <p class="text-center text-muted">¿No está registrado?</p>
+                        <p class="text-center text-muted"><a href="{{url('/registro')}}"><strong>Regístrase</strong></a>! Es fácil y solo le tomará un 1 minuto para ordenar su maqueta 3D.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <!-- Wrap all page content here -->
     <div id="wrap">
@@ -70,13 +100,8 @@
                             <li><a href="#"><i class="fa fa-pinterest fa-lg fa-fw"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin fa-lg fa-fw"></i></a></li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="{{url('/')}}">Inicio</a></li>
-                            <li><a href="{{ url('/beneficios') }}">Beneficios</a></li>
-                            <li><a href="{{ url('/update') }}">Upload</a></li>
-                            <li><a href="{{ url('/somos') }}">¿Quiénes somos?</a></li>
-                            <li><a href="#contact">Contáctanos</a></li>
-                        </ul>
+                        @yield('nav')
+                        
                     </div>
                     <!-- /.navbar-collapse -->
                 </div>

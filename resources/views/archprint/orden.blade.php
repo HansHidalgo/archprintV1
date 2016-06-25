@@ -16,7 +16,7 @@
 
                     <div class="box">
                         <form method="post" action="checkout2.html">
-                            <h1 style="color: #041d33">Orden</h1>
+                            <h1 style="color: #041d33">Ver Orden</h1>
                             <ul class="nav nav-pills nav-justified borde">
                                 <li class="disabled"><a href="#"><i class="fa fa-map-marker"></i><br>Dirección</a>
                                 </li>
@@ -69,11 +69,11 @@
 
                             <div class="box-footer">
                                 <div class="pull-left">
-                                    <a href="{{ url('/pago') }}" class="btn btn-default"><i class="fa fa-chevron-left"></i>Regresar a Método de pago</a>
+                                    <a href="{{ url('/pago') }}" class="btn btn-default"><i class="fa fa-chevron-left"></i>Regresar Pago</a>
                                 </div>
                                 <div class="pull-right">
                                 
-                                    <a href="{{ url('/history') }}" class="btn btn-primary">Continuar con Orden<i class="fa fa-chevron-right"></i></a>
+                                    <a href="{{ url('/history') }}" class="btn btn-primary">Historial órdenes<i class="fa fa-chevron-right"></i></a>
                                 </div>
                             </div>
                         </form>
@@ -124,4 +124,13 @@
             <!-- /.container -->
         </div>
 </section>
+@endsection
+@section('nav')
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="{{url('/')}}">Inicio</a></li>
+    <li><a href="{{ url('/beneficios') }}">Beneficios</a></li>
+    <li class="active"><a data-toggle="modal" data-target="#login-modal">Ordene</a></li>
+    <li><a href="{{ url('/somos') }}">¿Quiénes somos?</a></li>
+    <li><a href="#contact">Contáctanos</a></li>
+</ul>
 @endsection

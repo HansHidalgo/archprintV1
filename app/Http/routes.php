@@ -27,3 +27,4 @@ Route::get('orden', 'ArchprintController@orden');
 Route::get('update', 'ArchprintController@update');
 Route::post('update/file', 'ArchprintController@file');
 Route::get('history', 'ArchprintController@history');
+Route::get('registro', 'ArchprintController@registro');
